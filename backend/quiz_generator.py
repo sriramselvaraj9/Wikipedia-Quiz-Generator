@@ -2,15 +2,15 @@ import os
 import json
 from typing import Dict, List
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 from dotenv import load_dotenv
 
 load_dotenv()
 
-# Initialize Gemini LLM
+# Initialize Gemini LLM - Using gemini-1.5-flash (current free tier model)
 llm = ChatGoogleGenerativeAI(
-    model="gemini-pro",
+    model="gemini-1.5-flash",
     google_api_key=os.getenv("GOOGLE_API_KEY"),
     temperature=0.7,
     convert_system_message_to_human=True
@@ -124,16 +124,16 @@ def generate_quiz_from_content(title: str, content: str, sections: List[str]) ->
             template=QUIZ_GENERATION_PROMPT
         )
         
-        # Create chain
-        chain = LLMChain(llm=llm, prompt=prompt)
+        # Create chain using LCEL (LangChain Expression Language)
+        chain = prompt | llm | StrOutputParser()
         
         # Generate quiz
         sections_str = ", ".join(sections[:10])  # Limit sections in prompt
-        response = chain.run(
-            title=title,
-            content=content[:10000],  # Limit content for token constraints
-            sections=sections_str
-        )
+        response = chain.invoke({
+            "title": title,
+            "content": content[:10000],  # Limit content for token constraints
+            "sections": sections_str
+        })
         
         # Parse response
         quiz_data = extract_json_from_response(response)
