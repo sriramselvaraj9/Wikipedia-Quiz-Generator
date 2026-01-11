@@ -8,16 +8,19 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Database configuration
-DATABASE_URL = os.getenv(
-    "DATABASE_URL",
-    "postgresql://postgres:postgres@localhost:5432/wiki_quiz_db"
-)
+# Default to SQLite for local development if no DATABASE_URL is set
+DATABASE_URL = os.getenv("DATABASE_URL", "")
 
-# Handle Vercel PostgreSQL URL format (postgres:// -> postgresql://)
-if DATABASE_URL.startswith("postgres://"):
-    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
-
-engine = create_engine(DATABASE_URL)
+if not DATABASE_URL or DATABASE_URL == "postgresql://postgres:postgres@localhost:5432/wiki_quiz_db":
+    # Use SQLite for local development
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    DATABASE_URL = f"sqlite:///{os.path.join(BASE_DIR, 'wiki_quiz.db')}"
+    engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+else:
+    # Handle Vercel PostgreSQL URL format (postgres:// -> postgresql://)
+    if DATABASE_URL.startswith("postgres://"):
+        DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+    engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
