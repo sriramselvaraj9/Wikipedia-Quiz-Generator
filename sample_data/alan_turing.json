@@ -1,0 +1,131 @@
+{
+  "id": 1,
+  "url": "https://en.wikipedia.org/wiki/Alan_Turing",
+  "title": "Alan Turing",
+  "summary": "Alan Mathison Turing was an English mathematician, computer scientist, logician, cryptanalyst, philosopher, and theoretical biologist. Turing was highly influential in the development of theoretical computer science, providing a formalisation of the concepts of algorithm and computation with the Turing machine...",
+  "key_entities": {
+    "people": ["Alan Turing", "Alonzo Church", "Christopher Morcom", "Joan Clarke"],
+    "organizations": ["University of Cambridge", "Bletchley Park", "National Physical Laboratory", "University of Manchester"],
+    "locations": ["United Kingdom", "Maida Vale", "Sherborne", "Princeton"]
+  },
+  "sections": [
+    "Early life and education",
+    "Career and research",
+    "Cryptanalysis",
+    "World War II",
+    "Bombe",
+    "Turing test",
+    "Pattern formation and mathematical biology",
+    "Persecution for homosexuality",
+    "Death",
+    "Legacy"
+  ],
+  "quiz": [
+    {
+      "question": "Where did Alan Turing complete his undergraduate studies?",
+      "options": [
+        "Oxford University",
+        "Cambridge University",
+        "Harvard University",
+        "Princeton University"
+      ],
+      "answer": "Cambridge University",
+      "difficulty": "easy",
+      "explanation": "Alan Turing studied at King's College, Cambridge, where he graduated with distinction in mathematics in 1934."
+    },
+    {
+      "question": "What was Alan Turing's main contribution during World War II?",
+      "options": [
+        "Developing the atomic bomb",
+        "Breaking the Enigma code",
+        "Inventing radar technology",
+        "Designing fighter aircraft"
+      ],
+      "answer": "Breaking the Enigma code",
+      "difficulty": "medium",
+      "explanation": "Turing played a crucial role at Bletchley Park in breaking German military codes, particularly the Enigma cipher."
+    },
+    {
+      "question": "What machine did Turing design to help break the Enigma code?",
+      "options": [
+        "The Colossus",
+        "The Bombe",
+        "The ENIAC",
+        "The Difference Engine"
+      ],
+      "answer": "The Bombe",
+      "difficulty": "medium",
+      "explanation": "Turing designed the electromechanical machine called the Bombe, which was used to decipher Enigma-encrypted messages."
+    },
+    {
+      "question": "What is the Turing Test designed to evaluate?",
+      "options": [
+        "Computer processing speed",
+        "Machine intelligence",
+        "Code-breaking ability",
+        "Mathematical computation"
+      ],
+      "answer": "Machine intelligence",
+      "difficulty": "easy",
+      "explanation": "The Turing Test evaluates a machine's ability to exhibit intelligent behavior indistinguishable from that of a human."
+    },
+    {
+      "question": "In what year did Alan Turing die?",
+      "options": [
+        "1950",
+        "1952",
+        "1954",
+        "1956"
+      ],
+      "answer": "1954",
+      "difficulty": "medium",
+      "explanation": "Alan Turing died on June 7, 1954, at the age of 41."
+    },
+    {
+      "question": "What field did Turing also contribute to later in his career?",
+      "options": [
+        "Quantum physics",
+        "Mathematical biology",
+        "Astronomy",
+        "Chemistry"
+      ],
+      "answer": "Mathematical biology",
+      "difficulty": "hard",
+      "explanation": "Turing's work on morphogenesis and pattern formation in biology was published in 'The Chemical Basis of Morphogenesis' in 1952."
+    },
+    {
+      "question": "What was the name of Turing's theoretical computing device?",
+      "options": [
+        "Turing Calculator",
+        "Turing Engine",
+        "Turing Machine",
+        "Turing Computer"
+      ],
+      "answer": "Turing Machine",
+      "difficulty": "easy",
+      "explanation": "The Turing Machine is a mathematical model of computation that defines an abstract machine."
+    },
+    {
+      "question": "Why was Turing prosecuted in 1952?",
+      "options": [
+        "Espionage",
+        "Theft of government secrets",
+        "Homosexual acts",
+        "Tax evasion"
+      ],
+      "answer": "Homosexual acts",
+      "difficulty": "medium",
+      "explanation": "Turing was prosecuted for homosexual acts, which were illegal in the UK at that time, and was given a choice between imprisonment and chemical castration."
+    }
+  ],
+  "related_topics": [
+    "Cryptography",
+    "Enigma machine",
+    "Computer science history",
+    "Artificial intelligence",
+    "Bletchley Park",
+    "World War II codebreaking",
+    "Turing completeness"
+  ],
+  "created_at": "2026-01-11T10:30:00Z"
+}
